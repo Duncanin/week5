@@ -24,7 +24,7 @@ module.exports = {
                 // sm: '375px',
                 // md: '768px',
                 // lg: '992px',
-                xl: '1080px', // 最大寬度
+                xl: '1076px', // 最大寬度
             }
         },
         extend: {
@@ -76,13 +76,31 @@ module.exports = {
             },
             borderRadius: {
                 'radius-0': '0px',
+                'radius-4': '4px',
+                'radius-8': '8px',
                 'radius-12': '12px',
                 'radius-16': '16px',
                 'radius-24': '24px',
                 'radius-1000': '1000px',
             },
             boxShadow: {
-                'Primary': '0px 0px 16px rgba(0, 0, 0, 0.12)',
+                'boxShadow': '0px 0px 16px rgba(0, 0, 0, 0.12)',
+            },
+            spacing: {
+                'spac-0': '0px',
+                'spac-4': '4px',
+                'spac-8': '8px',
+                'spac-12': '12px',
+                'spac-16': '16px',
+                'spac-20': '20px',
+                'spac-24': '24px',
+                'spac-48': '48px',
+                'spac-80': '80px',
+                'spac-300': '300px',
+                'spac-320': '320px',
+                'spac-400': '400px',
+                'spac-625': '625px',
+                'spac-730': '730px',
             },
         },
     },

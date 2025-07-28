@@ -1,47 +1,1041 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-    <!-- test -->
-    <%- include("./layout/header") %>
-    
-    <div class="container">
-      <div class="bg-natural-60">
-        <h1 class="text-d">test</h1>
-        <hr>
-        <h2 class="text-5xl">中文321abc</h2>
-        <h2 class="text-4xl">中文321abc</h2>
-        <h2 class="text-3xl">中文321abc</h2>
-        <h2 class="text-2xl">中文321abc</h2>
-        <h2 class="text-xl">中文321abc</h2>
-        <hr>
-        <h2 class="text-b-lg">中文321abc</h2>
-        <h2 class="text-b-md">中文321abc</h2>
-        <h2 class="text-b-sm">中文321abc</h2>
-        <h2 class="text-b-xs">中文321abc</h2>
-        
-        <hr>
+<html lang="en" class="scroll-smooth">
 
-        <p class="font-medium">123 font-medium</p>
-        <p class="font-normal">123 font-normal</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+
+  <%- include("./layout/header") %>
+
+
+
+
+    <section class="bg-natural-95">
+      <div class="container">
+
+
+        <section class="py-spac-48 md:py-spac-80 px-spac-12 md:px-0">
+
+          <!--Tabs navigation-->
+          <div class="mb-spac-16 md:mb-spac-24">
+            <ul role="tablist" data-twe-nav-ref class="flex gap-4 md:gap-6 justify-center">
+              <li role="presentation">
+                <a class="bg-natural-light shadow-none transition-all
+                  flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-memberInfo" data-twe-toggle="pill"
+                  data-twe-target="#tabs-memberInfo" role="tab" aria-controls="tabs-memberInfo" aria-selected="false">
+                  <img src="/assets/images/plan/face.svg" alt="face-img">
+                  個人資料
+                </a>
+              </li>
+              <li role="presentation">
+                <a class="bg-natural-light shadow-none transition-all
+                  flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-reserveRecord"
+                  data-twe-toggle="pill" data-twe-target="#tabs-reserveRecord" role="tab"
+                  aria-controls="tabs-reserveRecord" aria-selected="false">
+                  <img src="/assets/images/plan/pending.svg" alt="pending-img">
+                  預約紀錄
+                </a>
+              </li>
+              <li role="presentation">
+                <a class="bg-natural-light shadow-none transition-all
+                  flex btn-outline
+                data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-careerPlan" data-twe-toggle="pill"
+                  data-twe-target="#tabs-careerPlan" data-twe-nav-active role="tab" aria-controls="tabs-careerPlan"
+                  aria-selected="true">
+                  <img src="/assets/images/plan/list.svg" alt="list-img">
+                  職旅計劃
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!--Tabs content-->
+          <div class="bg-natural-light shadow-boxShadow rounded-card p-spac-24 md:p-spac-48">
+
+
+            <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+              id="tabs-memberInfo" role="tabpanel" aria-labelledby="tabs-memberInfo-tab">
+              Tab 1 content
+            </form>
+
+            <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+              id="tabs-reserveRecord" role="tabpanel" aria-labelledby="tabs-reserveRecord-tab">
+              Tab 2 content
+            </form>
+
+            <!--TABs career plan -->
+            <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block space-y-spac-24 md:space-y-spac-48"
+              id="tabs-careerPlan" role="tabpanel" aria-labelledby="tabs-careerPlan-tab" data-twe-tab-active>
+
+
+              <!-- career status -->
+              <section class="md:flex">
+
+                <h2 class="cusText-2xl text-natural-10 font-medium
+                            flex items-center justify-between md:flex-col md:items-start min-w-spac-300 md:justify-start md:gap-3 mb-4">職旅計劃概況
+                  <sapn class="cusText-b-md text-natural-50">欄位皆為
+                    <span class="cusText-b-sm font-medium py-1 px-2 text-natural-light bg-danger-45 rounded-radius-12">
+                      必填</span>
+                  </sapn>
+                </h2>
+  
+                  
+                <div class="md:flex flex-col border-b border-natural-85 pb-6 md:pb-12 space-y-4 md:space-y-6">
+
+                  <!-- career status radio -->
+                  <div class="space-y-spac-8 space-x-spac-8">
+                    <h3 class="cusText-b-md">目前職業狀態</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="careerStatus" id="full-time" checked/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="full-time">
+                          全職上班族
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="careerStatus" id="part-time"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="part-time">
+                          兼職工作者
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="careerStatus" id="freelancer"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="freelancer">
+                          自由工作者/接案者
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="careerStatus" id="digital-Nomad"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="digital-Nomad">
+                          數位遊牧者
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="careerStatus" id="entrepreneur"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="entrepreneur">
+                          創業者/企業主
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="careerStatus" id="betweenJobs"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="betweenJobs">
+                          待業中
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60 peer"
+                          type="radio" name="careerStatus" id="others"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="digital-Nomad">
+                          其他
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="請輸入說明"
+                          class="hidden peer-checked:block ml-3 px-2 py-1 border border-natural-85 rounded"
+                        />
+                      </div>
+                  
+                    </div>
+                    
+                  </div>
+                  
+                  <!-- professional field -->
+                  <div class="relative" data-twe-dropdown-ref>
+                    <button
+                      class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main
+                      cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-twe-dropdown-toggle-ref
+                      aria-expanded="false"
+                      data-twe-ripple-init
+                      data-twe-ripple-color="light">
+                      工作產業
+                      <span class="me-0 [&>svg]:h-5 [&>svg]:w-5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor">
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                        </svg>
+                      </span>
+                    </button>
+                    <ul
+                      class="absolute z-[1000] m-0 hidden list-none rounded-tagAndDropdown border-none bg-clip-padding text-base data-[twe-dropdown-show]:flex flex-col w-full py-2 shadow-boxShadow bg-natural-light"
+                      aria-labelledby="dropdownMenuButton1"
+                      data-twe-dropdown-menu-ref>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >科技</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >媒體</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >教育</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >金融</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >醫療健康</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >零售製造</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >服務業</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >藝術創意</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >非營利組織</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <!-- work seniority -->
+                  <div class="relative" data-twe-dropdown-ref>
+                    <button
+                      class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main
+                      cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-twe-dropdown-toggle-ref
+                      aria-expanded="false"
+                      data-twe-ripple-init
+                      data-twe-ripple-color="light">
+                      工作年資
+                      <span class="me-0 [&>svg]:h-5 [&>svg]:w-5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor">
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                        </svg>
+                      </span>
+                    </button>
+                    <ul
+                      class="absolute z-[1000] m-0 hidden list-none rounded-tagAndDropdown border-none bg-clip-padding text-base data-[twe-dropdown-show]:flex flex-col w-full py-2 shadow-boxShadow bg-natural-light"
+                      aria-labelledby="dropdownMenuButton1"
+                      data-twe-dropdown-menu-ref>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >1 年以下</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >1-3 年</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >3-5 年</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >5-10 年</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >10 年以上</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+  
+  
+                  <!-- income -->
+                  <div class="space-y-spac-8 space-x-spac-8">
+                    <h3 class="cusText-b-md">月收入區間</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ㄍㄩㄟ" id="below30k" checked/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="below30k">
+                          3 萬以下
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ㄍㄩㄟ" id="30-50k"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="30-50k">
+                          3-5 萬
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ㄍㄩㄟ" id="50-80k"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="50-80k">
+                          5-8 萬
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ㄍㄩㄟ" id="80-120k"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="80-120k">
+                          8-12 萬
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ㄍㄩㄟ" id="120-200k"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="120-200k">
+                          12-20 萬
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ㄍㄩㄟ" id="above200k"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="above200k">
+                          20 萬以上
+                        </label>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+  
+  
+  
+                  <!-- career summary -->
+                  <div class="relative">
+                    <textarea
+                      maxlength="300"
+                      type="text"
+                      name="careerSummary"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="floatingInput"
+                      placeholder="careerSummary" ></textarea>
+                    <label
+                      for="floatingInput"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >職業摘要（簡短描述您的專業背景和核心競爭力最多 300 字）</label
+                    >
+                  </div>
+  
+                  <!-- project showcase -->
+                  <div class="relative">
+                    <textarea
+                      type="text"
+                      maxlength="300"
+                      name="projectShowcase"
+                      class="peer m-0 block h-[53px] md:h-[56px] w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="floatingInput"
+                      placeholder="projectShowcase" ></textarea>
+                    <label
+                      for="floatingInput"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >作品案例展示</label
+                    >
+                  </div>
+  
+                  <!-- upload -->
+                  <div class="space-y-2">
+                    <h3>附件檔案</h3>
+                    <div class="">
+                      <label
+                        for="upload"
+                        class="btn-outline cursor-pointer inline-flex outline outline-natural-85 md:px-5 md:gap-1 cusText-b-md"
+                        >
+                        <img src="/assets/images/plan/upload.svg" alt="upload-img">
+                        上傳檔案
+                      </label>
+                      <input
+                        class="hidden"
+                        type="file"
+                        name="upload"
+                        id="upload" />
+                  
+                  </div>
+                  </div>
+                    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+                </div>
+              
+              </section>
+
+              <!-- career plan -->
+              <section class="md:flex">
+                <h2 class="cusText-2xl text-natural-10 font-medium
+                            flex items-center justify-between md:flex-col md:items-start min-w-spac-300 md:justify-start md:gap-3 mb-4">職涯規劃
+                  <sapn class="cusText-b-md text-natural-50">欄位皆為
+                    <span class="cusText-b-sm font-medium py-1 px-2 text-natural-light bg-danger-45 rounded-radius-12">
+                      必填</span>
+                  </sapn>
+                </h2>
+                  
+                <div class="md:flex flex-col border-b border-natural-85 pb-6 md:pb-12 space-y-4 md:space-y-6">
+
+                  <!-- 1 year career plan -->
+                  <div class="relative">
+                    <textarea
+                      name="1yearPlan"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="floatingInput"
+                      placeholder="1yearPlan" ></textarea>
+                    <label
+                      for="floatingInput"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >1 年短期職涯目標（最多 300 字）</label
+                    >
+                  </div>
+
+                  <!-- 1-3 year career plan -->
+                  <div class="relative">
+                    <textarea
+                      name="1-3yearPlan"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="floatingInput"
+                      placeholder="1-3yearPlan" ></textarea>
+                    <label
+                      for="floatingInput"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >1-3 年中長期職涯願景（最多 300 字）</label
+                    >
+                  </div>
+
+
+                  <!-- idea work mode -->
+                  <div class="space-y-spac-8 space-x-spac-8">
+                    <h3 class="cusText-b-md">理想工作模式</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ideaMode" id="office" checked/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="office">
+                          固定辦公室工作
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ideaMode" id="mix-officeAndRemote"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="mix-officeAndRemote">
+                          混合式工作(辦公室+遠端)
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ideaMode" id="remote-fixed"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="remote-fixed">
+                          完全遠端工作(固定地點)
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="ideaMode" id="Nomad"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="Nomad">
+                          數位遊牧(邊工作邊旅行)
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60 peer"
+                          type="radio" name="ideaMode" id="othersMode"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="othersMode">
+                          其他(請說明)
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="請輸入說明"
+                          class="hidden peer-checked:block ml-3 px-2 py-1 border border-natural-85 rounded"
+                        />
+                      </div>
+                  
+                    </div>
+                    
+                  </div>
+                  
+                  <!-- idea income -->
+                  <div class="relative mb-3">
+                    <input
+                      type="number"
+                      class="peer m-0 block h-[53px md:h-[58px] w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 text-base font-normal leading-tight text-neutral-700 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-neutral-700 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md"
+                      id="floatingInput"
+                      placeholder="ideaIncome" />
+                    <label
+                      for="floatingInput"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >目標薪資/收入</label
+                    >
+                  </div>
+  
+  
+                  <!-- career challenge -->
+                  <div class="space-y-spac-8">
+                    <h3 class="cusText-b-md">目前面臨的職涯挑戰</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="careerChallenge" id="unclearDirection" />
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="unclearDirection">
+                          方向不明確
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="careerChallenge" id="skillImprove"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="skillImprove">
+                          技能需要提升
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="careerChallenge" id="unstableIncome"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="unstableIncome">
+                          收入不穩定
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="careerChallenge" id="clientAcquisition"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="clientAcquisition">
+                          客戶開發困難
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="careerChallenge" id="timeIssue"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="timeIssue">
+                          時間管理問題
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="careerChallenge" id="lifeImbalance"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="lifeImbalance">
+                          工作生活失衡
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="careerChallenge" id="lackNetworking"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="lackNetworking">
+                          缺乏人脈資源
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60 peer"
+                          type="checkbox" name="careerChallenge" id="othersReason"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="othersReason">
+                          其他(請說明)
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="請輸入說明"
+                          class="hidden peer-checked:block ml-3 px-2 py-1 border border-natural-85 rounded"
+                        />
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+  
+                  <!-- forward Assistant -->
+                  <div class="space-y-spac-8">
+                    <h3 class="cusText-b-md">期望獲得的協助與資源</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="careerGuide" />
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="careerGuide">
+                          職涯方向指導
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="skillSuggest"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="skillSuggest">
+                          專業技能提升建議
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="branding"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="branding">
+                          個人品牌建立
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="freelanceStrategy"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="freelanceStrategy">
+                          接案策略與定價
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="clientDev"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="clientDev">
+                          客戶開發方法
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="finacialPlan"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="finacialPlan">
+                          財務規劃
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="timeManage"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="timeManage">
+                          時間管理系統
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="supportNeed" id="balanceInLife"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="balanceInLife">
+                          工作生活平衡
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60 peer"
+                          type="checkbox" name="supportNeed" id="othersSupport"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="othersSupport">
+                          其他(請說明)
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="請輸入說明"
+                          class="hidden peer-checked:block ml-3 px-2 py-1 border border-natural-85 rounded"
+                        />
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+
+                  <!-- interest Service -->
+                  <div class="space-y-spac-8">
+                    <h3 class="cusText-b-md">感興趣的服務方案</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="interstService" id="explorePosition" />
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="explorePosition">
+                          探索定位
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="interstService" id="customPlan"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="customPlan">
+                          客製化方案
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="interestService" id="practicalGuide"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="practicalGuide">
+                          實戰指導
+                        </label>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+
+                </div>
+              
+              </section>
+
+              <!-- professional skills -->
+              <section class="md:flex">
+                <h2 class="cusText-2xl text-natural-10 font-medium
+                            flex items-center justify-between md:flex-col md:items-start min-w-spac-300 md:justify-start md:gap-3 mb-4">專業技能區塊
+                  <sapn class="cusText-b-md text-natural-50">欄位皆為選填
+                    <!-- <span class="cusText-b-sm font-medium py-1 px-2 text-natural-light bg-danger-45 rounded-radius-12">
+                      必填</span> -->
+                  </sapn>
+                </h2>
+  
+                  
+                <div class="md:flex flex-col border-b border-natural-85 pb-6 md:pb-12 space-y-4 md:space-y-6">
+
+                  <!-- core professional field -->
+                  <div class="space-y-spac-8">
+                    <h3 class="cusText-b-md">核心專業領域</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="design-creative" />
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="design-creative">
+                          設計/創意
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="tech-programing"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="tech-programing">
+                          科技/程式開發
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="market-publicRelation"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="market-publicRelation">
+                          行銷/公關
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="creation-writing"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="creation-writing">
+                          內容創作/寫作
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="consiltin-advisory"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="consiltin-advisory">
+                          顧問/諮詢
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="business-management"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="business-management">
+                          商業/管理
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="finance-accounting"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="finance-accounting">
+                          財務/會計
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="education-training"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="education-training">
+                          教育/培訓
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="lawWorker"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="lawWorker">
+                          法律/合規
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-radius-4 border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-radius-4 before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-radius-4 after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-radius-4 checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="checkbox" name="coreField" id="medical-health"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="medical-health">
+                          健康/醫療
+                        </label>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+
+                  <!-- professional background and core compititions -->
+                  <div class="relative">
+                    <textarea
+                      name="professionalBackgrounds"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="professionalBackgrounds"
+                      placeholder="professionalBackgrounds" ></textarea>
+                    <label
+                      for="professionalBackgrounds"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >專業背景和核心競爭力（最多300字）</label
+                    >
+                  </div>
+
+                  <!-- professional skills -->
+                  <div class="relative">
+                    <textarea
+                      name="professionalSkills"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="professionalSkills"
+                      placeholder="professionalSkills" ></textarea>
+                    <label
+                      for="professionalSkills"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >專業技能（最多300字）</label
+                    >
+                  </div>
+
+                  <!-- language abilities -->
+                  <div class="relative">
+                    <textarea
+                      name="languageAbilities"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="languageAbilities"
+                      placeholder="languageAbilities" ></textarea>
+                    <label
+                      for="languageAbilities"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >專業技能（最多300字）</label
+                    >
+                  </div>
+
+                  <!-- qualification Certificate -->
+                  <div class="relative">
+                    <textarea
+                      name="qualificationCertificate"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="qualificationCertificate"
+                      placeholder="qualificationCertificate" ></textarea>
+                    <label
+                      for="qualificationCertificate"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >資格證照（最多300字）</label
+                    >
+                  </div>
+                  
+                </div>
+              
+              </section>
+
+              <!-- education background -->
+              <section class="md:flex">
+                <h2 class="cusText-2xl text-natural-10 font-medium
+                            flex items-center justify-between md:flex-col md:items-start min-w-spac-300 md:justify-start md:gap-3 mb-4">教育背景
+                  <sapn class="cusText-b-md text-natural-50">欄位皆為選填
+                    <!-- <span class="cusText-b-sm font-medium py-1 px-2 text-natural-light bg-danger-45 rounded-radius-12">
+                      必填</span> -->
+                  </sapn>
+                </h2>
+                  
+                <div class="md:flex flex-col space-y-4 md:space-y-6 w-full">
+                  
+                  
+                  <!-- academic background -->
+                  <div class="relative">
+                    <textarea
+                      name="academicBackground"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="academicBackground"
+                      placeholder="academicBackground" ></textarea>
+                    <label
+                      for="academicBackground"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >學歷背景（最多500字）</label
+                    >
+                  </div>
+
+                  <!-- Training and Workshops -->
+                  <div class="relative">
+                    <textarea
+                      name="trainingAndWorkshops"
+                      maxlength="300"
+                      rows="6"
+                      type="text"
+                      class="peer m-0 block h-40 w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:text-natural-50 focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none"
+                      id="trainingAndWorkshops"
+                      placeholder="trainingAndWorkshops" ></textarea>
+                    <label
+                      for="trainingAndWorkshops"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm"
+                      >專業培訓與工作坊（最多500字）</label
+                    >
+                  </div>
+                  
+                </div>
+              
+              </section>
+
+              <!-- button -->
+              <section class="flex flex-col gap-4 md:flex-row-reverse justify-center md:gap-6">
+                <button type="button" class="btn-filled cusText-b-md">
+                  儲存更新
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
+                </button>
+
+                <button type="button" class="btn-outline cusText-b-md">
+                  匯出 PDF
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
+                </button>
+              </section>
+
+            </form>
+          </div>
+
+        </section>
+
+
+
       </div>
-      
-      
-    </div>
 
-    <%- include("./layout/footer") %>
+    </section>
 
-    
-    <script type="module" src="../main.js"></script>
-    <script type="text/javascript" src="../node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
-  </body>
+
+
+  <%- include("./layout/footer") %>
+
+
+  <script type="module" src="../main.js"></script>
+  <script type="text/javascript" src="../node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
+
+</body>
+
 </html>
