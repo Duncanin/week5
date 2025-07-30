@@ -31,16 +31,18 @@
           <div class="mb-spac-16 md:mb-spac-24">
             <ul role="tablist" data-twe-nav-ref class="flex gap-4 md:gap-6 justify-center">
               <li role="presentation">
+                <!-- <a class="bg-natural-light shadow-none transition-all
+                  flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-memberInfo" data-twe-toggle="pill"
+                  data-twe-target="#tabs-memberInfo" role="tab" aria-controls="tabs-memberInfo" aria-selected="false"> -->
                 <a class="bg-natural-light shadow-none transition-all
                   flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-memberInfo" data-twe-toggle="pill"
-                  data-twe-target="#tabs-memberInfo" role="tab" aria-controls="tabs-memberInfo" aria-selected="false">
+                  data-twe-target="#tabs-memberInfo" role="tab" aria-controls="tabs-memberInfo" aria-selected="true" data-twe-nav-active>
                   <img src="/assets/images/plan/face.svg" alt="face-img">
                   個人資料
                 </a>
               </li>
               <li role="presentation">
-                <!-- <a class="bg-natural-light shadow-none transition-all flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-reserveRecord" data-twe-toggle="pill" data-twe-target="#tabs-reserveRecord" role="tab" aria-controls="tabs-reserveRecord" aria-selected="false"> -->
-                  <a class="bg-natural-light shadow-none transition-all flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-reserveRecord" data-twe-toggle="pill" data-twe-target="#tabs-reserveRecord" role="tab" aria-controls="tabs-reserveRecord" aria-selected="true" data-twe-nav-active>
+                <a class="bg-natural-light shadow-none transition-all flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-reserveRecord" data-twe-toggle="pill" data-twe-target="#tabs-reserveRecord" role="tab" aria-controls="tabs-reserveRecord" aria-selected="false">
                   <img src="/assets/images/plan/pending.svg" alt="pending-img">
                   預約紀錄
                 </a>
@@ -59,17 +61,296 @@
           <!--Tabs content-->
           <div class="bg-natural-light shadow-boxShadow rounded-card p-spac-24 md:p-spac-48">
 
+              <!-- TABs personal profile -->
+            <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block space-y-spac-24 md:space-y-spac48" id="tabs-memberInfo" role="tabpanel" aria-labelledby="tabs-memberInfo-tab" data-twe-tab-active>
 
-            <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
-              id="tabs-memberInfo" role="tabpanel" aria-labelledby="tabs-memberInfo-tab">
-              Tab 1 content
+              <!-- personal profile -->
+              <section class="md:flex gap-4 md:gap-6 pb-14 md:pb-0">
+                <h2 class="cusText-2xl font-medium min-w-spac-300">個人資料</h2>
+
+                <main class="flex flex-col gap-4 md:gap-6 ">
+
+                  <!-- user Img -->
+                  <div class="flex items-end gap-4">
+                    <!-- user Img -->
+                    <div class="object-cover w-[120px] rounded-full overflow-hidden border border-natural-85">
+                      <img src="/assets/images/plan/user_pic.png" alt="user_pic" class="w-full h-auto block">
+                    </div>
+                    <!-- upload btn -->
+                    <div class="">
+                      <label
+                        for="uploadImg"
+                        class="btn-outline cursor-pointer inline-flex outline outline-natural-85 md:px-5 md:gap-1 cusText-b-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z"/></svg>
+                        更新頭貼
+                      </label>
+                      <input class="hidden" type="file" name="uploadImg" id="uploadImg" />
+                    </div>
+                  </div>
+
+                  <!-- user name -->
+                  <div class="relative">
+                      <input
+                      type="text"
+                      maxlength="30"
+                      name="userName"
+                      value="Mokumaru"
+                      class="peer m-0 block h-[53px] md:h-[56px] w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md"
+                      id="userName"
+                      placeholder="userName"
+                    />
+
+                    <label
+                      for="userName"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm peer-[:not(:placeholder-shown)]:text-natural-50"
+                    >
+                      姓名
+                    </label>
+                  </div>
+
+                  <!-- gender -->
+                  <div class="space-y-spac-8 space-x-spac-8">
+                    <h3 class="cusText-b-md">性別</h3>
+                    <div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="gender" id="female" checked/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="female">
+                          女性
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="gender" id="male"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="male">
+                          男性
+                        </label>
+                      </div>
+                      <div class="ps-[1.5rem] flex items-center cusText-b-sm">
+                        <input
+                          class="relative -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border border-natural-85 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary-60 checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-3 checked:after:w-3 checked:after:rounded-full checked:after:border-primary-60 checked:after:bg-primary-60 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary-60"
+                          type="radio" name="gender" id="noPublic"/>
+                        <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="noPublic">
+                          不願透露
+                        </label>
+                      </div>
+                  
+                    </div>
+                    
+                  </div>
+
+                  <!-- birthday -->
+                  <div class="relative">
+                    <input
+                      type="date"
+                      value="2000-01-10"
+                      name="birthday"
+                      class="peer m-0 block w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md resize-none appearance-none [&::-webkit-calendar-picker-indicator]:hidden"
+                      id="birthday"
+                      placeholder="birthday">
+                    </input>
+                    <label
+                      for="birthday"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm text-natural-50"
+                      >生日</label>
+                  </div>
+
+                  <!-- password Change -->
+                  <div class="space-y-spac-8">
+                    <h3 class="cusText-b-md">密碼</h3>
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="btn-outline transition duration-150 ease-in-out focus:shadow-primary-2 focus:outline-none focus:ring-0 active:shadow-primary-2 "
+                      data-twe-toggle="modal"
+                      data-twe-target="#exampleModal">
+                      修改密碼
+                      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none" color="currentColor"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                    </button>
+
+                    <!-- Modal -->
+                      <!-- out Layer -->
+                    <div
+                      data-twe-modal-init
+                      class="fixed inset-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none bg-natural-main/50"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                        <!-- middle Layer -->
+                      <div
+                        data-twe-modal-dialog-ref
+                        class="pointer-events-none opacity-0 transition-all duration-300 ease-in-out p-6 flex items-center justify-center h-full w-full">
+                          <!-- inner Layer -->
+                        <div
+                          class="pointer-events-auto flex flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none w-full max-w-[480px]">
+
+                          <!-- Modal header -->
+                          <div
+                            class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-natural-85 py-2 px-4 md:pl-6 ">
+                            <h4
+                              class="cusText-xl font-medium"
+                              id="exampleModalLabel">
+                              更新密碼
+                            </h4>
+                            <button
+                              type="button"
+                              class="iconBtn"
+                              data-twe-modal-dismiss
+                              aria-label="Close">
+                              <span class="[&>svg]:h-6 [&>svg]:w-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg" height="20px"
+                                  viewBox="0 -960 960 960" width="20px"
+                                  fill="#currentColor">
+                                  <path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg>
+                              </span>
+                            </button>
+                          </div>
+
+                          <!-- Modal body -->
+                          <div class="flex flex-col p-6 md:p-4 gap-6 md:gap-4" data-twe-modal-body-ref>
+                            <!-- 1st password -->
+                            <div class="relative">
+                              <input
+                                minlength="8"
+                                type="password"
+                                rows="1"
+                                name="password"
+                                class="peer m-0 block w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:outline-none peer-focus:text-primary-border-primary-60 cusText-b-md resize-none" id="password"
+                                placeholder="password"
+                                required>
+                              <label
+                                for="password"
+                                class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear cusText-b-md peer-focus:cusText-b-sm peer-focus:hidden peer-acitve:hidden peer-[&:not(:placeholder-shown)]:hidden"
+                                >密碼</label>
+                            </div>
+
+                            <!-- 2nd password -->
+                            <div class="relative">
+                              <input
+                                minlength="8"
+                                type="password"
+                                rows="1"
+                                name="passwordCheck"
+                                class="peer m-0 block w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:outline-none peer-focus:text-primary-border-primary-60 cusText-b-md resize-none" id="passwordCheck"
+                                placeholder="passwordCheck"
+                                required>
+                              <label
+                                for="passwordCheck"
+                                class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear cusText-b-md peer-focus:cusText-b-sm peer-focus:hidden peer-acitve:hidden peer-[&:not(:placeholder-shown)]:hidden"
+                                >再次密碼</label>
+                            </div>
+                          </div>
+
+                          <!-- Modal footer -->
+                          <div
+                            class="flex justify-end border-t border-natural-85 p-6 md:p-4">
+                            <button
+                              type="button"
+                              class="btn-filled transition duration-150 ease-in-out text-natural-light">
+                              更新密碼
+                              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <!-- email -->
+                  <div class="relative">
+                    <input
+                      type="email"
+                      maxlength="50"
+                      name="email"
+                      value="mokumaru@mail.com"
+                      class="peer m-0 block h-[53px] md:h-[56px] w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md"
+                      id="email"
+                      placeholder="email"
+                    />
+
+                    <label
+                      for="email"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm peer-[:not(:placeholder-shown)]:text-natural-50"
+                    >
+                      信箱
+                    </label>
+                    <p class="cusText-b-sm text-natural-50 px-2">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
+                  </div>
+
+                  <!-- contact phone number -->
+                  <div class="relative">
+                    <input
+                      type="phoneNumber"
+                      maxlength="15"
+                      name="phoneNumber"
+                      value="09-1234-5678"
+                      class="peer m-0 block h-[53px] md:h-[56px] w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md"
+                      id="phoneNumber"
+                      placeholder="phoneNumber"
+                    />
+
+                    <label
+                      for="phoneNumber"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm peer-[:not(:placeholder-shown)]:text-natural-50"
+                    >
+                      聯絡電話
+                    </label>
+                  </div>
+
+                  <!-- contact address -->
+                  <div class="relative">
+                    <input
+                      type="text"
+                      maxlength="30"
+                      name="address"
+                      value="高雄市三民區九如一路 87 號"
+                      class="peer m-0 block h-[53px] md:h-[56px] w-full rounded-radius-8 border border-solid border-natural-85 bg-transparent bg-clip-padding px-3 py-4 transition duration-200 ease-linear placeholder:text-transparent focus:border-primary-60 focus:pb-[0.625rem] focus:pt-[1.625rem] focus:outline-none peer-focus:text-primary-border-primary-60 [&:not(:placeholder-shown)]:pb-[0.625rem] [&:not(:placeholder-shown)]:pt-[1.625rem] cusText-b-md"
+                      id="address"
+                      placeholder="address"
+                    />
+
+                    <label
+                      for="address"
+                      class="pointer-events-none absolute left-0 top-0 origin-[0_0] border border-solid border-transparent px-3 py-4 transition-[opacity,_transform] duration-200 ease-linear peer-focus:-translate-y-2 peer-focus:translate-x-[0.15rem] peer-focus:scale-[0.85] peer-focus:text-natural-50 peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:scale-[0.85] motion-reduce:transition-none cusText-b-md peer-focus:cusText-b-sm peer-[:not(:placeholder-shown)]:text-natural-50"
+                    >
+                      通訊地址
+                    </label>
+                  </div>
+
+
+
+                </main>
+
+
+
+              </section>
+
+
+              <!-- submit button -->
+              <div class="flex flex-col gap-4 md:flex-row-reverse justify-center md:gap-6">
+                <button type="button" class="btn-filled cusText-b-md">
+                  儲存更新
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
+                </button>
+
+                <button type="button" class="btn-outline cusText-b-md">
+                  重新填寫
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
+                </button>
+              </div>
             </form>
 
+            <!-- TABs reserve Record -->
             <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block space-y-spac-24 md:space-y-spac-48"
-              id="tabs-reserveRecord" role="tabpanel" aria-labelledby="tabs-reserveRecord-tab"
-              data-twe-tab-active>
+              id="tabs-reserveRecord" role="tabpanel" aria-labelledby="tabs-reserveRecord-tab">
               
-              <!-- reserve Record -->
+              <!-- reserve Record title-->
               <section class="space-y-spac-16 md:space-y-spac-24">
                 <h2 class="cusText-2xl font-medium">預約紀錄</h2>
                 <div class="flex gap-6">
@@ -136,14 +417,14 @@
                   <div class="relative" data-twe-dropdown-ref>
                     <!-- px-6 pb-2 pt-2.5 -->
                     <button
-                      class="btn-outline p-[10px] outline-none transition duration-150 ease-in-out hover:shadow-primary-2 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:shadow-primary-2 motion-reduce:transition-none"
+                      class="iconBtn md:btn-outline transition duration-150 ease-in-out hover:shadow-primary-2 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:shadow-primary-2 motion-reduce:transition-none"
                       type="button"
                       id="sortButton"
                       data-twe-dropdown-toggle-ref
                       aria-expanded="false"
                       data-twe-ripple-init
                       data-twe-ripple-color="light">
-                      
+                      <span class="hidden md:contents">排序</span>
                       <span class="[&>svg]:h-6 [&>svg]:w-6">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#currentColor"><path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z"/></svg>
                       </span>
@@ -173,7 +454,7 @@
 
                 </nav>
 
-                <!--Tabs content-->
+                <!--reserve Records -- Tabs content-->
                 <div class="mb-6">
                   <div
                     class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
@@ -182,144 +463,137 @@
                     aria-labelledby="tabs-All-tab"
                     data-twe-tab-active>
                       <!-- all Reserve tab -->
+                    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                      <table
+                        class="min-w-full text-left border-collapse">
+                        <caption class="md:hidden cusText-b-sm font-medium text-left border-b border-natural-85 px-spac-8 py-[11.5px]">預約紀錄一覽</caption>
+                        <thead
+                        class="hidden border-b border-natural-85 md:table-header-group">
+                          <tr class="cusText-b-sm">
+                            <th scope="col" class="p-3 font-medium">諮詢方案</th>
+                            <th scope="col" class="p-3 font-medium">預約日期</th>
+                            <th scope="col" class="p-3 font-medium">諮詢時長</th>
+                            <th scope="col" class="p-3 font-medium">諮詢方式</th>
+                            <th scope="col" class="p-3 font-medium">上課狀態</th>
+                          </tr>
+                        </thead>
+                        
+                        <tbody class="cusText-b-sm">
+                          <tr
+                            class="transition duration-300 ease-in-out hover:bg-primary-90 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 6/6堂</td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                              <time datetime="2025-11-11">
+                                <span class="md:hidden">時間：</span>
+                                2025/11/11</time>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                              <span aria-label="60分鐘">
+                                <span class="md:hidden">時長：</span>60分鐘</span>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-start-[17] row-start-1">
+                              <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                視訊
+                              </div>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                              <span class="text-natural-10">等待上課</span>
+                            </td>
+                          </tr>
+                          <tr
+                            class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 5/6堂</td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                              <time datetime="2025-10-10">2025/10/10</time>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                              <span aria-label="60分鐘">60 分鐘</span>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                              <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                視訊
+                              </div>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                              <span class="text-natural-10">等待上課</span>
+                            </td>
+                          </tr>
+                          <tr
+                            class="transition duration-300 ease-in-out hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 4/6堂</td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                              <time datetime="2025-9-9">2025/09/09</time>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                              <span aria-label="60分鐘">60 分鐘</span>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                              <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                視訊
+                              </div>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                                已完成
+                            </td>
+                          </tr>
+                          <tr
+                            class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 3/6堂</td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                              <time datetime="2025-8-8">2025/08/08</time>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                              <span aria-label="60分鐘">60 分鐘</span>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                              <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                面對面
+                              </div>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                              已完成
+                            </td>
+                          </tr>
+                          <tr
+                            class="transition duration-300 ease-in-out hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 2/6堂</td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                              <time datetime="2025-7-7">2025/07/07</time>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                              <span aria-label="60分鐘">60 分鐘</span>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                              <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                面對面
+                              </div>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                                已完成
+                            </td>
+                          </tr>
+                          <tr
+                            class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 1/6堂</td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                              <time datetime="2025-6-6">2025/06/06</time>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                              <span aria-label="90分鐘">90 分鐘</span>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                              <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                面對面
+                              </div>
+                            </td>
+                            <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                              已完成
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
 
-                      <div class="flex flex-col">
-                        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-                            <div class="overflow-hidden">
-
-                              <table
-                                class="min-w-full text-left border-collapse">
-                                <caption class="md:hidden cusText-b-sm font-medium text-left border-b border-natural-85 px-spac-8 py-[11.5px]">預約紀錄一覽</caption>
-                                <thead
-                                class="hidden border-b border-natural-85 md:table-header-group">
-                                  <tr class="cusText-b-sm">
-                                    <th scope="col" class="p-3 font-medium">諮詢方案</th>
-                                    <th scope="col" class="p-3 font-medium">預約日期</th>
-                                    <th scope="col" class="p-3 font-medium">諮詢時長</th>
-                                    <th scope="col" class="p-3 font-medium">諮詢方式</th>
-                                    <th scope="col" class="p-3 font-medium">上課狀態</th>
-                                  </tr>
-                                </thead>
-                                
-                                <tbody class="cusText-b-sm">
-                                  <tr
-                                    class="transition duration-300 ease-in-out hover:bg-primary-90 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 6/6堂</td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
-                                      <time datetime="2025-11-11">
-                                        <span class="md:hidden">時間：</span>
-                                        2025/11/11</time>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
-                                      <span aria-label="60分鐘">
-                                        <span class="md:hidden">時長：</span>60分鐘</span>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-start-[17] row-start-1">
-                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
-                                        視訊
-                                      </div>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
-                                      <span class="text-natural-10">等待上課</span>
-                                    </td>
-                                  </tr>
-                                  <tr
-                                    class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 5/6堂</td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
-                                      <time datetime="2025-10-10">2025/10/10</time>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
-                                      <span aria-label="60分鐘">60 分鐘</span>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
-                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
-                                        視訊
-                                      </div>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
-                                      <span class="text-natural-10">等待上課</span>
-                                    </td>
-                                  </tr>
-                                  <tr
-                                    class="transition duration-300 ease-in-out hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 4/6堂</td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
-                                      <time datetime="2025-9-9">2025/09/09</time>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
-                                      <span aria-label="60分鐘">60 分鐘</span>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
-                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
-                                        視訊
-                                      </div>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
-                                        已完成
-                                    </td>
-                                  </tr>
-                                  <tr
-                                    class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 3/6堂</td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
-                                      <time datetime="2025-8-8">2025/08/08</time>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
-                                      <span aria-label="60分鐘">60 分鐘</span>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
-                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
-                                        面對面
-                                      </div>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
-                                      已完成
-                                    </td>
-                                  </tr>
-                                  <tr
-                                    class="transition duration-300 ease-in-out hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 2/6堂</td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
-                                      <time datetime="2025-7-7">2025/07/07</time>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
-                                      <span aria-label="60分鐘">60 分鐘</span>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
-                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
-                                        面對面
-                                      </div>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
-                                        已完成
-                                    </td>
-                                  </tr>
-                                  <tr
-                                    class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 1/6堂</td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
-                                      <time datetime="2025-6-6">2025/06/06</time>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
-                                      <span aria-label="90分鐘">90 分鐘</span>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
-                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
-                                        面對面
-                                      </div>
-                                    </td>
-                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
-                                      已完成
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 
                   </div>
                   <div
@@ -327,14 +601,14 @@
                     id="tabs-Finished"
                     role="tabpanel"
                     aria-labelledby="tabs-Finished-tab">
-                    Tab 2 content
+                      <!-- finished tab -->
                   </div>
                   <div
                     class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
                     id="tabs-Canciled"
                     role="tabpanel"
                     aria-labelledby="tabs-Finished-tab">
-                    Tab 3 content
+                      <!-- canciled tab -->
                   </div>
                 </div>
               </section>
@@ -718,7 +992,7 @@
                         name="upload"
                         id="upload" />
                   
-                  </div>
+                    </div>
                   </div>
                     
   

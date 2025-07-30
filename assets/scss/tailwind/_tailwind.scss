@@ -90,4 +90,10 @@
         @apply hover:bg-secondary-50 active:bg-secondary-50;
         @apply md:px-5 md:gap-1;
     }
+
+    .iconBtn {
+        @apply flex items-center justify-center p-[10px] bg-natural-light rounded-btn;
+        @apply hover:bg-natural-90 active:bg-natural-90;
+        @apply md:gap-1;
+    }
 }
