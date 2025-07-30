@@ -1,6 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* body {
     @apply bg-gray-100 text-gray-800;
@@ -20,6 +18,10 @@
         letter-spacing: 0.05em;
     }
 }
+
+
+
+@tailwind components;
 
 @layer components {
 
@@ -97,3 +99,6 @@
         @apply md:gap-1;
     }
 }
+
+
+@tailwind utilities;

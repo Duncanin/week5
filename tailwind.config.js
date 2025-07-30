@@ -6,6 +6,7 @@ const { boxShadow } = require('tailwindcss/defaultTheme');
 module.exports = {
     content: [
         './index.html',
+        "./src/**/*.{html,js,ts,jsx,tsx}",
         './main.js',
         './pages/**/*.html',
         './layout/**/*.ejs',
@@ -104,6 +105,7 @@ module.exports = {
             },
         },
     },
-    plugins: [require("tw-elements/plugin.cjs")],
+    plugins: [
+        require("tw-elements/plugin.cjs",)],
     darkMode: "class"
 };
