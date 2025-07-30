@@ -39,20 +39,16 @@
                 </a>
               </li>
               <li role="presentation">
-                <a class="bg-natural-light shadow-none transition-all
-                  flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-reserveRecord"
-                  data-twe-toggle="pill" data-twe-target="#tabs-reserveRecord" role="tab"
-                  aria-controls="tabs-reserveRecord" aria-selected="false">
+                <!-- <a class="bg-natural-light shadow-none transition-all flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-reserveRecord" data-twe-toggle="pill" data-twe-target="#tabs-reserveRecord" role="tab" aria-controls="tabs-reserveRecord" aria-selected="false"> -->
+                  <a class="bg-natural-light shadow-none transition-all flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-reserveRecord" data-twe-toggle="pill" data-twe-target="#tabs-reserveRecord" role="tab" aria-controls="tabs-reserveRecord" aria-selected="true" data-twe-nav-active>
                   <img src="/assets/images/plan/pending.svg" alt="pending-img">
                   預約紀錄
                 </a>
               </li>
               <li role="presentation">
-                <a class="bg-natural-light shadow-none transition-all
-                  flex btn-outline
-                data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-careerPlan" data-twe-toggle="pill"
-                  data-twe-target="#tabs-careerPlan" data-twe-nav-active role="tab" aria-controls="tabs-careerPlan"
-                  aria-selected="true">
+                <!-- <a class="bg-natural-light shadow-none transition-all
+                  flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-careerPlan" data-twe-toggle="pill" data-twe-target="#tabs-careerPlan" data-twe-nav-active role="tab" aria-controls="tabs-careerPlan" aria-selected="true"> -->
+                  <a class="bg-natural-light shadow-none transition-all flex btn-outline data-[twe-nav-active]:bg-natural-90 cusText-b-md" href="#tabs-careerPlan" data-twe-toggle="pill" data-twe-target="#tabs-careerPlan" role="tab" aria-controls="tabs-careerPlan" aria-selected="false">
                   <img src="/assets/images/plan/list.svg" alt="list-img">
                   職旅計劃
                 </a>
@@ -69,14 +65,288 @@
               Tab 1 content
             </form>
 
-            <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
-              id="tabs-reserveRecord" role="tabpanel" aria-labelledby="tabs-reserveRecord-tab">
-              Tab 2 content
+            <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block space-y-spac-24 md:space-y-spac-48"
+              id="tabs-reserveRecord" role="tabpanel" aria-labelledby="tabs-reserveRecord-tab"
+              data-twe-tab-active>
+              
+              <!-- reserve Record -->
+              <section class="space-y-spac-16 md:space-y-spac-24">
+                <h2 class="cusText-2xl font-medium">預約紀錄</h2>
+                <div class="flex gap-6">
+                  <div class="hidden text-center py-spac-16 md:py-spac-24 md:block border border-natural-85 rounded-card w-full space-y-spac-8">
+                    <var class="cusText-4xl text-primary-60">3</var>
+                    <p class="cusText-b-lg text-natural-50">已完成諮詢</p>
+                  </div>
+                  <div class="text-center py-spac-16 md:py-spac-24 border border-natural-85 rounded-card w-full space-y-spac-8">
+                    <datetime class="cusText-4xl text-primary-60">2025/10/10</datetime>
+                    <p class="cusText-b-lg text-natural-50">已完成諮詢</p>
+                  </div>
+                  <div class="hidden text-center py-spac-16 md:py-spac-24 md:block border border-natural-85 rounded-card w-full space-y-spac-8">
+                    <div class="cusText-4xl text-primary-60">3/6</div>
+                    <p class="cusText-b-lg text-natural-50">已完成諮詢</p>
+                  </div>
+                </div>
+              
+              </section>
+
+              <!-- reserve Record Detail -->
+              <section class="space-y-spac-16 md:space-y-spac-24">
+                <!-- reserve Record Button -->
+                <nav class="flex items-center justify-between">
+                  <!--Tabs navigation-->
+                  <ul class="flex list-none flex-row flex-wrap border-b-0 ps-0 gap-spac-8"
+                    role="tablist"
+                    data-twe-nav-ref>
+                    <li role="presentation">
+                      <a href="#tabs-All"
+                        class="block border-transparent hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[twe-nav-active]:bg-natural-main data-[twe-nav-active]:text-natural-light btn-outline md:px-5 cusText-b-md"
+                        data-twe-toggle="pill"
+                        data-twe-target="#tabs-All"
+                        data-twe-nav-active
+                        role="tab"
+                        aria-controls="tabs-All"
+                        aria-selected="true"
+                        >全部預約</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#tabs-Finished"
+                        class="block border-transparent hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[twe-nav-active]:bg-natural-main data-[twe-nav-active]:text-natural-light btn-outline cusText-b-md"
+                        data-twe-toggle="pill"
+                        data-twe-target="#tabs-Finished"
+                        role="tab"
+                        aria-controls="tabs-Finished"
+                        aria-selected="false"
+                        >已完成</a>
+                    </li>
+                    <li role="presentation">
+                      <a
+                        href="#tabs-Canciled"
+                        class="block border-transparent hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[twe-nav-active]:bg-natural-main data-[twe-nav-active]:text-natural-light btn-outline cusText-b-md"
+                        data-twe-toggle="pill"
+                        data-twe-target="#tabs-Canciled"
+                        role="tab"
+                        aria-controls="tabs-Canciled"
+                        aria-selected="false"
+                        >已取消</a
+                      >
+                    </li>
+                  </ul>
+  
+                  <!-- sort Button -->
+                  <div class="relative" data-twe-dropdown-ref>
+                    <!-- px-6 pb-2 pt-2.5 -->
+                    <button
+                      class="btn-outline p-[10px] outline-none transition duration-150 ease-in-out hover:shadow-primary-2 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:shadow-primary-2 motion-reduce:transition-none"
+                      type="button"
+                      id="sortButton"
+                      data-twe-dropdown-toggle-ref
+                      aria-expanded="false"
+                      data-twe-ripple-init
+                      data-twe-ripple-color="light">
+                      
+                      <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#currentColor"><path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z"/></svg>
+                      </span>
+                    </button>
+
+                    <ul class="absolute z-[1000] m-0 hidden min-w-40 list-none overflow-hidden rounded-tAD border-none bg-natural-light bg-clip-padding shadow-lg data-[twe-dropdown-show]:block py-spac-8"
+                      aria-labelledby="sortButton"
+                      data-twe-dropdown-menu-ref>
+                      <li>
+                        <a
+                          class="inline-block w-full whitespace-nowrap bg-natural-light px-spac-16 md:px-spac-24 py-spac-8 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >新到舊</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="inline-block w-full whitespace-nowrap bg-natural-light px-spac-16 md:px-spac-24 py-spac-8 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline"
+                          href="#"
+                          data-twe-dropdown-item-ref
+                          >舊到新</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                </nav>
+
+                <!--Tabs content-->
+                <div class="mb-6">
+                  <div
+                    class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+                    id="tabs-All"
+                    role="tabpanel"
+                    aria-labelledby="tabs-All-tab"
+                    data-twe-tab-active>
+                      <!-- all Reserve tab -->
+
+                      <div class="flex flex-col">
+                        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                            <div class="overflow-hidden">
+
+                              <table
+                                class="min-w-full text-left border-collapse">
+                                <caption class="md:hidden cusText-b-sm font-medium text-left border-b border-natural-85 px-spac-8 py-[11.5px]">預約紀錄一覽</caption>
+                                <thead
+                                class="hidden border-b border-natural-85 md:table-header-group">
+                                  <tr class="cusText-b-sm">
+                                    <th scope="col" class="p-3 font-medium">諮詢方案</th>
+                                    <th scope="col" class="p-3 font-medium">預約日期</th>
+                                    <th scope="col" class="p-3 font-medium">諮詢時長</th>
+                                    <th scope="col" class="p-3 font-medium">諮詢方式</th>
+                                    <th scope="col" class="p-3 font-medium">上課狀態</th>
+                                  </tr>
+                                </thead>
+                                
+                                <tbody class="cusText-b-sm">
+                                  <tr
+                                    class="transition duration-300 ease-in-out hover:bg-primary-90 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 6/6堂</td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                                      <time datetime="2025-11-11">
+                                        <span class="md:hidden">時間：</span>
+                                        2025/11/11</time>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                                      <span aria-label="60分鐘">
+                                        <span class="md:hidden">時長：</span>60分鐘</span>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-start-[17] row-start-1">
+                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                        視訊
+                                      </div>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                                      <span class="text-natural-10">等待上課</span>
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 5/6堂</td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                                      <time datetime="2025-10-10">2025/10/10</time>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                                      <span aria-label="60分鐘">60 分鐘</span>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                        視訊
+                                      </div>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                                      <span class="text-natural-10">等待上課</span>
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    class="transition duration-300 ease-in-out hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 4/6堂</td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                                      <time datetime="2025-9-9">2025/09/09</time>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                                      <span aria-label="60分鐘">60 分鐘</span>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                        視訊
+                                      </div>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                                        已完成
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 3/6堂</td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                                      <time datetime="2025-8-8">2025/08/08</time>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                                      <span aria-label="60分鐘">60 分鐘</span>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                        面對面
+                                      </div>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                                      已完成
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    class="transition duration-300 ease-in-out hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 2/6堂</td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                                      <time datetime="2025-7-7">2025/07/07</time>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                                      <span aria-label="60分鐘">60 分鐘</span>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                        面對面
+                                      </div>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                                        已完成
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    class="transition duration-300 ease-in-out bg-natural-90 hover:bg-primary-90 text-natural-60 grid grid-cols-[repeat(20,minmax(0,1fr))] md:table-row">
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 cusText-b-md col-[span_16]">職涯定位-職涯探索包 | 1/6堂</td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-9">
+                                      <time datetime="2025-6-6">2025/06/06</time>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2 col-span-11">
+                                      <span aria-label="90分鐘">90 分鐘</span>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2  col-start-[17] row-start-1">
+                                      <div class="border border-natural-85 rounded-tAD text-natural-50 px-spac-8 inline bg-natural-light">
+                                        面對面
+                                      </div>
+                                    </td>
+                                    <td class="whitespace-nowrap md:py-3 py-2 md:px-3 px-2">
+                                      已完成
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div
+                    class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+                    id="tabs-Finished"
+                    role="tabpanel"
+                    aria-labelledby="tabs-Finished-tab">
+                    Tab 2 content
+                  </div>
+                  <div
+                    class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+                    id="tabs-Canciled"
+                    role="tabpanel"
+                    aria-labelledby="tabs-Finished-tab">
+                    Tab 3 content
+                  </div>
+                </div>
+              </section>
+
+
             </form>
 
             <!--TABs career plan -->
+            <!-- <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block space-y-spac-24 md:space-y-spac-48"
+              id="tabs-careerPlan" role="tabpanel" aria-labelledby="tabs-careerPlan-tab" data-twe-tab-active> -->
             <form class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block space-y-spac-24 md:space-y-spac-48"
-              id="tabs-careerPlan" role="tabpanel" aria-labelledby="tabs-careerPlan-tab" data-twe-tab-active>
+              id="tabs-careerPlan" role="tabpanel" aria-labelledby="tabs-careerPlan-tab" >
 
 
               <!-- career status -->
@@ -169,7 +439,8 @@
                       class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main
                       cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
                       type="button"
-                      id="dropdownMenuButton1"
+                      id="professionalField"
+                      name="professionalField"
                       data-twe-dropdown-toggle-ref
                       aria-expanded="false"
                       data-twe-ripple-init
@@ -189,7 +460,7 @@
                     </button>
                     <ul
                       class="absolute z-[1000] m-0 hidden list-none rounded-tagAndDropdown border-none bg-clip-padding text-base data-[twe-dropdown-show]:flex flex-col w-full py-2 shadow-boxShadow bg-natural-light"
-                      aria-labelledby="dropdownMenuButton1"
+                      aria-labelledby="professionalField"
                       data-twe-dropdown-menu-ref>
                       <li>
                         <a
@@ -272,7 +543,8 @@
                       class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main
                       cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
                       type="button"
-                      id="dropdownMenuButton1"
+                      name="worSeniority"
+                      id="worSeniority"
                       data-twe-dropdown-toggle-ref
                       aria-expanded="false"
                       data-twe-ripple-init
@@ -292,7 +564,7 @@
                     </button>
                     <ul
                       class="absolute z-[1000] m-0 hidden list-none rounded-tagAndDropdown border-none bg-clip-padding text-base data-[twe-dropdown-show]:flex flex-col w-full py-2 shadow-boxShadow bg-natural-light"
-                      aria-labelledby="dropdownMenuButton1"
+                      aria-labelledby="worSeniority"
                       data-twe-dropdown-menu-ref>
                       <li>
                         <a

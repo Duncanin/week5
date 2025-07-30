@@ -9,7 +9,6 @@
 @layer base {
     *, *::before, *::after {
         box-sizing: border-box;
-        letter-spacing: 0.05em;
         // outline: 1px solid red;
     }
 
@@ -18,6 +17,7 @@
         // 常備設定
         system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, 'Helvetica Neue', "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         color: #141A1F;
+        letter-spacing: 0.05em;
     }
 }
 
@@ -48,7 +48,7 @@
         @apply font-bold text-[18px] leading-[1.5] tracking-[.02em];
         @apply md:text-[20px];
     }
-    .cusText-b-lg {
+    .cusText-b-l－ {
         @apply font-normal text-[16px] leading-[1.5] tracking-[.02em];
         @apply md:text-[18px];
     }
@@ -72,7 +72,8 @@
     .rounded-btn {
         @apply rounded-xl md:rounded-2xl;
     }
-    .rounded-tagAndDropdown {
+    // tags And Dropdown
+    .rounded-tAD {
         @apply rounded-xl;
     }
 
