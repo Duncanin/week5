@@ -11,8 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
     rel="stylesheet">
-  <script type="module" crossorigin src="/week5/assets/main-DDcjB0q8.js"></script>
-  <link rel="stylesheet" crossorigin href="/week5/assets/main-CZdW8mxg.css">
+  <script type="module" crossorigin src="/week5/assets/main-mWxQMePy.js"></script>
+  <link rel="stylesheet" crossorigin href="/week5/assets/main-DoicHRrG.css">
 </head>
 
 <body>
@@ -181,8 +181,8 @@
                   <!-- user Img -->
                   <div class="flex items-end gap-4">
                     <!-- user Img -->
-                    <div class="object-cover w-[120px] rounded-full overflow-hidden border border-natural-85">
-                      <img src="/week5/assets/user_pic-qsdzM2IO.png" alt="user_pic" class="w-full h-auto block">
+                    <div class="w-[120px] h-[120px] rounded-full overflow-hidden border border-natural-85">
+                      <img src="/week5/assets/user_pic-qsdzM2IO.png" alt="user_pic" class="w-full h-full block object-cover" id="preview">
                     </div>
                     <!-- upload btn -->
                     <div class="">
@@ -193,6 +193,15 @@
                         更新頭貼
                       </label>
                       <input class="hidden" type="file" name="uploadImg" id="uploadImg" />
+                      <script>
+                        document.getElementById('uploadImg').addEventListener('change', function (e) {
+                          const file = e.target.files[0];
+                          if (file) {
+                            const imgPreview = document.getElementById('preview');
+                            imgPreview.src = URL.createObjectURL(file);
+                          }
+                        });
+                      </script>
                     </div>
                   </div>
 
