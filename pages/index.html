@@ -73,8 +73,8 @@
                   <!-- user Img -->
                   <div class="flex items-end gap-4">
                     <!-- user Img -->
-                    <div class="object-cover w-[120px] rounded-full overflow-hidden border border-natural-85">
-                      <img src="/assets/images/plan/user_pic.png" alt="user_pic" class="w-full h-auto block">
+                    <div class="w-[120px] h-[120px] rounded-full overflow-hidden border border-natural-85">
+                      <img src="/assets/images/plan/user_pic.png" alt="user_pic" class="w-full h-full block object-cover" id="preview">
                     </div>
                     <!-- upload btn -->
                     <div class="">
@@ -85,6 +85,15 @@
                         更新頭貼
                       </label>
                       <input class="hidden" type="file" name="uploadImg" id="uploadImg" />
+                      <script>
+                        document.getElementById('uploadImg').addEventListener('change', function (e) {
+                          const file = e.target.files[0];
+                          if (file) {
+                            const imgPreview = document.getElementById('preview');
+                            imgPreview.src = URL.createObjectURL(file);
+                          }
+                        });
+                      </script>
                     </div>
                   </div>
 
