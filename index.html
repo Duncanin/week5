@@ -816,17 +816,16 @@
                   </div>
                   
                   <!-- professional field -->
+                  <!-- 隱藏 input -->
+                  <input type="hidden" name="professionalField" id="professionalFieldValue">
                   <div class="relative" data-twe-dropdown-ref>
                     <button
-                      class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main
-                      cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
+                      class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
                       type="button"
                       id="professionalField"
                       name="professionalField"
                       data-twe-dropdown-toggle-ref
-                      aria-expanded="false"
-                      data-twe-ripple-init
-                      data-twe-ripple-color="light">
+                      aria-expanded="false">
                       工作產業
                       <span class="me-0 [&>svg]:h-5 [&>svg]:w-5">
                         <svg
@@ -917,16 +916,39 @@
                         >
                       </li>
                     </ul>
+
+                    <script>
+                      document.querySelectorAll('[data-twe-dropdown-item-ref]').forEach(item => {
+                        item.addEventListener('click', function (e) {
+                          e.preventDefault(); // 避免 <a href="#"> 跳頁
+
+                          const value = this.getAttribute('data-value'); // 真正的值
+                          const text = this.textContent.trim();          // 顯示的文字
+
+                          // 更新隱藏 input
+                          document.getElementById('professionalFieldValue').value = value;
+
+                          // 更新按鈕上的文字（保留箭頭）
+                          const button = document.getElementById('professionalField');
+                          const spanIcon = button.querySelector('span');
+                          button.innerHTML = text; // 先設文字
+                          button.appendChild(spanIcon); // 再把箭頭加回來
+                        });
+                      });
+                      </script>
+
                   </div>
-  
+
+
                   <!-- work seniority -->
+                  <!-- 隱藏 input -->
+                  <input type="hidden" name="workSeniority" id="workSeniorityValue">
                   <div class="relative" data-twe-dropdown-ref>
                     <button
-                      class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main
-                      cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
+                      class="flex rounded-lg px-3 py-4 shadow-natural-90 transition duration-150 ease-in-out hover:bg-natural-90 hover:shadow-natural-90 motion-reduce:transition-none text-natural-main cusText-b-md w-full justify-between outline outline-1 outline-natural-85"
                       type="button"
-                      name="worSeniority"
-                      id="worSeniority"
+                      name="workSeniority"
+                      id="workSeniority"
                       data-twe-dropdown-toggle-ref
                       aria-expanded="false"
                       data-twe-ripple-init
@@ -946,11 +968,11 @@
                     </button>
                     <ul
                       class="absolute z-[1000] m-0 hidden list-none rounded-tagAndDropdown border-none bg-clip-padding text-base data-[twe-dropdown-show]:flex flex-col w-full py-2 shadow-boxShadow bg-natural-light"
-                      aria-labelledby="worSeniority"
+                      aria-labelledby="workSeniority"
                       data-twe-dropdown-menu-ref>
                       <li>
                         <a
-                          class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
+                        class="block w-full whitespace-nowrap text-natural-main px-6 py-2 hover:bg-natural-90 focus:bg-natural-90 focus:outline-none active:bg-natural-90 active:no-underline cusText-b-md"
                           href="#"
                           data-twe-dropdown-item-ref
                           >1 年以下</a
@@ -989,6 +1011,26 @@
                         >
                       </li>
                     </ul>
+
+                    <script>
+                      document.querySelectorAll('[data-twe-dropdown-item-ref]').forEach(item => {
+                        item.addEventListener('click', function (e) {
+                          e.preventDefault(); // 避免 <a href="#"> 跳頁
+
+                          const value = this.getAttribute('data-value'); // 真正的值
+                          const text = this.textContent.trim();          // 顯示的文字
+
+                          // 更新隱藏 input
+                          document.getElementById('workSeniorityValue').value = value;
+
+                          // 更新按鈕上的文字（保留箭頭）
+                          const button = document.getElementById('workSeniority');
+                          const spanIcon = button.querySelector('span');
+                          button.innerHTML = text; // 先設文字
+                          button.appendChild(spanIcon); // 再把箭頭加回來
+                        });
+                      });
+                    </script>
                   </div>
   
   
@@ -1703,6 +1745,7 @@
         
     </div>
 </footer>
+
 
 
 
